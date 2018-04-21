@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Memory Game</title>
+	<meta name="description" content="">
+	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div id="overlay">
+		<div id="summary" class="game-message">
+			<h2 class="congrats-message">Congratulations, you won!</h2>
+			<p id="score" class="score">Here is your score! Stars: 
+			<span id="stars" class="stars-number">3</span>, Moves:
+			<span id="totalMoves" class="moves-number">0</span>, Time: 
+			<span id="totalTime" class="score-time">00:00</span></p>
+			<p class= "new-game">Click <a href="#" onclick="restartGame(); return false;">here</a> to start a new game</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<header>
+			<h1>Memory Game</h1>
+		</header>
+
+		<section class="score-panel">
+			<ul class="stars">
+				<li><i id="star-1" class="fa fa-star"></i></li>
+				<li><i id="star-2" class="fa fa-star"></i></li>
+				<li><i id="star-3" class="fa fa-star"></i></li>
+			</ul>
+			<div id="moves" class="mymoves">0 Moves</div>
+			<time id="gameTimer" class="timer">00:00</time>
+			<div id="restartGame" class="restart">
+				<i class="fa fa-repeat"></i>
+			</div>
+		</section>
+
+		<ul id="myDeck" class="deck">
+		</ul>
+	</div>
+	
+	<footer>
+	<p>Udacity project ©Fabiana Meloni</p>
+	<p>Icons designed by Smashicons from Flaticon</p>
+	</footer>
+
+	<script src="js/app.js"></script>
+</body>
+</html>
