@@ -155,8 +155,6 @@ function endGame(){
 	document.getElementById("summary").style.display = "block";
 }
 
-
-
 function restartGame(){
 	document.getElementById("gameTimer").innerHTML = "00:00";
 	document.getElementById("moves").innerHTML = "0 Moves";
@@ -168,6 +166,7 @@ function restartGame(){
 	secondsString = '00';
 	seconds = 0;
 	moves = 0;
+	pairs = 0;
 	clearTimeout(myTimer);
 	init();
 }
@@ -177,7 +176,7 @@ restart.addEventListener("click", restartGame);
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -186,6 +185,5 @@ function shuffle(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
     return array;
 }
